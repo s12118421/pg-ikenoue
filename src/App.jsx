@@ -220,23 +220,16 @@ function Access({ t }) {
             </div>
           </div>
 
-          {/* Map placeholder */}
-          <div className="bg-gray-900 rounded-2xl border border-gray-800 min-h-[280px] overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-gray-800/50 to-gray-900" />
-            <div className="absolute inset-0 opacity-5" style={{
-              backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-              backgroundSize: "30px 30px"
-            }} />
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              <div className="w-12 h-12 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center mb-3">
-                <svg className="w-6 h-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
-                </svg>
-              </div>
-              <span className="text-gray-500 text-xs uppercase tracking-wider">Google Maps</span>
-              <span className="text-gray-700 text-xs mt-1">Embed will be placed here</span>
-            </div>
+          <div className="rounded-2xl border border-gray-800 min-h-[280px] overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.0!2d139.6675345!3d35.6586236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f30e22bcb361%3A0x31dd4646dd0a807c!2z44Kq44Os44Oz44K444K744Kq44Oq44O844OV44Kj44OD44OI44ON44K5IOS4i-WMl-ayog!5e0!3m2!1sja!2sjp!4v1700000000000"
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: "280px", filter: "invert(90%) hue-rotate(180deg) brightness(0.8) contrast(1.2)" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
           </div>
         </div>
       </div>
